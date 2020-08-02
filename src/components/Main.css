@@ -1,0 +1,9 @@
+.app-title{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.MuiSwitch-root.ui-swich {
+  position: absolute;
+  right: 0;
+}
