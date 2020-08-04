@@ -49,7 +49,7 @@ const createAction = (type, url, payload) => {
       requestId || url,
       {
         begin: () => ({
-          type: `${type}_PENDING`,
+          type: `${type}_LOADING`,
           payload
         }),
         success: (response) => ({

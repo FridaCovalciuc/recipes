@@ -1,3 +1,7 @@
+#root {
+  height: 100vh;
+}
+
 .app-title{
   margin: 0 auto;
   text-align: center;
@@ -6,4 +10,22 @@
 .MuiSwitch-root.ui-swich {
   position: absolute;
   right: 0;
+}
+.main-dark {
+  background-color: #121212;
+}
+
+.main-dark .app-title,
+.main-dark .title, 
+.main-dark .MuiInputBase-root.MuiInput-root ,
+.main-dark .MuiInput-underline:before {
+  color: white;
+}
+
+.card {
+  margin: 1rem;
+}
+
+.card-image {
+  height: 250px;
 }

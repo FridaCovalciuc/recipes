@@ -1,13 +1,29 @@
-import React from 'react';
+// import React from 'react';
 import Main from '../components/Main';
-import './App.css';
+import {connect} from 'react-redux';
+import {getRecipes} from '../actions/recipes';
+import { setDarkMode } from '../actions/ui';
 
-function App() {
-  return (
-    <div>
-      <Main />
-    </div>
-  );
-}
+const mapStateToProps = (state) => {
+  return {
+    recipes: state.recipes,
+    ui: state.ui
+  };
+};
 
-export default App;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getRecipes: (input) => {
+      return dispatch(getRecipes(input));
+    },
+    setDarkMode: (value) => {
+      return dispatch(setDarkMode(value));
+    }
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Main);
+

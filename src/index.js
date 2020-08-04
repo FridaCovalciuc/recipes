@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import configureStore from './store/configureStore';
 import './index.css';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 
+const StoreConfig = configureStore();
+
 ReactDOM.render(
-  <React.StrictMode>
+  <StoreConfig.Provider store={StoreConfig.store}>
     <App />
-  </React.StrictMode>,
+  </StoreConfig.Provider>,
   document.getElementById('root')
 );
 
